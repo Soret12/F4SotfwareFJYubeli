@@ -1,0 +1,32 @@
+[2026-07-06 20:45:33] Cliente registrado correctamente: Juanita Lopez
+[2026-07-06 20:45:52] Error de cliente: Ya existe un cliente con ese identificador.
+[2026-07-06 20:46:26] Cliente registrado correctamente: Luis Díaz
+[2026-07-06 20:46:55] Cliente registrado correctamente: María Ruiz
+[2026-07-06 20:48:27] Servicio registrado correctamente: Computadora 
+[2026-07-06 20:48:59] Servicio registrado correctamente: Oceano
+[2026-07-06 20:49:31] Error de servicio: Ya existe un servicio con ese identificador.
+[2026-07-06 20:49:37] Servicio registrado correctamente: Pago Impuestos
+[2026-07-06 20:50:02] Reserva 1 creada correctamente.
+[2026-07-06 20:50:02] Proceso de creación de reserva finalizado.
+[2026-07-06 20:50:09] Reserva 1 confirmada.
+[2026-07-06 20:50:42] Error al crear reserva: Ya existe una reserva con ese identificador.
+[2026-07-06 20:50:42] Proceso de creación de reserva finalizado.
+[2026-07-06 20:50:59] Reserva 2 creada correctamente.
+[2026-07-06 20:50:59] Proceso de creación de reserva finalizado.
+[2026-07-06 20:51:22] Reserva 3 creada correctamente.
+[2026-07-06 20:51:22] Proceso de creación de reserva finalizado.
+[2026-07-06 20:51:28] Reserva 3 procesada. Total: $3500000.0
+[2026-07-06 20:51:37] Reserva 3 confirmada.
+[2026-07-06 20:51:43] Cliente registrado correctamente: Ana Torres
+[2026-07-06 20:51:43] Cliente registrado correctamente: Carlos Perez
+[2026-07-06 20:51:43] Error de cliente: Ya existe un cliente con ese identificador.
+[2026-07-06 20:51:43] Servicio registrado correctamente: Sala reuniones
+[2026-07-06 20:51:43] Servicio registrado correctamente: Computador portátil
+[2026-07-06 20:51:43] Servicio registrado correctamente: Asesoría programación
+[2026-07-06 20:51:43] Error de servicio: El precio debe ser mayor que cero.
+[2026-07-06 20:51:43] Reserva R001 creada correctamente.
+[2026-07-06 20:51:43] Proceso de creación de reserva finalizado.
+[2026-07-06 20:51:43] Reserva R001 confirmada.
+[2026-07-06 20:51:43] Reserva R001 procesada. Total: $150000.0
+[2026-07-06 20:51:43] Reserva R001 cancelada.
+[2026-07-06 20:51:43] Error al procesar reserva: No se puede procesar una reserva cancelada.
