@@ -147,148 +147,141 @@ class MenuPrincipal:
 
         errores = 0
 
-
-        # 1. Cliente válido
+        # ==========================
+        # 1. Registrar cliente válido
+        # ==========================
 
         try:
-
             self.gestor_clientes.registrar_cliente(
-                "C001",
-                "Ana Torres",
-                "ana@gmail.com",
-                "3001112233"
+                "CLI001",
+                "Laura Mendoza",
+                "laura.mendoza@gmail.com",
+                "3105558899"
             )
 
         except ClienteInvalidoError:
-
             errores += 1
 
 
-
-        # 2. Segundo cliente válido
+        # ==========================
+        # 2. Registrar segundo cliente
+        # ==========================
 
         try:
-
             self.gestor_clientes.registrar_cliente(
-                "C002",
-                "Carlos Perez",
-                "carlos@gmail.com",
-                "3004445566"
+                "CLI002",
+                "Andres Ramirez",
+                "andres.ramirez@gmail.com",
+                "3157772233"
             )
 
         except ClienteInvalidoError:
-
             errores += 1
 
 
-
-        # 3. Cliente repetido
+        # ==========================
+        # 3. Cliente duplicado
+        # ==========================
 
         try:
-
             self.gestor_clientes.registrar_cliente(
-                "C001",
-                "Cliente repetido",
-                "error@gmail.com",
-                "000000"
+                "CLI001",
+                "Cliente duplicado",
+                "duplicado@gmail.com",
+                "3000000000"
             )
 
         except ClienteInvalidoError:
-
             errores += 1
 
 
-
-        # 4. Crear sala
+        # ==========================
+        # 4. Crear sala válida
+        # ==========================
 
         try:
-
             self.gestor_servicios.registrar_servicio(
                 "Sala",
-                "S001",
-                "Sala reuniones",
-                50000,
-                20
+                "SAL001",
+                "Sala Ejecutiva Premium",
+                80000,
+                15
             )
 
         except ServicioInvalidoError:
-
             errores += 1
 
 
-
-        # 5. Crear equipo
+        # ==========================
+        # 5. Crear equipo válido
+        # ==========================
 
         try:
-
             self.gestor_servicios.registrar_servicio(
                 "Equipo",
-                "E001",
-                "Computador portátil",
-                30000,
-                5
-            )
-
-        except ServicioInvalidoError:
-
-            errores += 1
-
-
-
-        # 6. Crear asesoría
-
-        try:
-
-            self.gestor_servicios.registrar_servicio(
-                "Asesoria",
-                "A001",
-                "Asesoría programación",
-                80000,
-                "Desarrollo software"
-            )
-
-        except ServicioInvalidoError:
-
-            errores += 1
-
-
-
-        # 7. Servicio con error
-
-        try:
-
-            self.gestor_servicios.registrar_servicio(
-                "Sala",
-                "S002",
-                "Sala inválida",
-                -500,
+                "EQ001",
+                "Computador Portatil Dell",
+                45000,
                 10
             )
 
         except ServicioInvalidoError:
-
             errores += 1
 
 
+        # ==========================
+        # 6. Crear asesoría válida
+        # ==========================
 
-        # 8. Reserva válida
+        try:
+            self.gestor_servicios.registrar_servicio(
+                "Asesoria",
+                "ASE001",
+                "Asesoria de Desarrollo Web",
+                120000,
+                "Programacion y tecnologia"
+            )
+
+        except ServicioInvalidoError:
+            errores += 1
+
+
+        # ==========================
+        # 7. Servicio inválido
+        # ==========================
+
+        try:
+            self.gestor_servicios.registrar_servicio(
+                "Sala",
+                "SAL002",
+                "Sala con precio incorrecto",
+                -10000,
+                20
+            )
+
+        except ServicioInvalidoError:
+            errores += 1
+
+
+        # ==========================
+        # 8. Crear reserva válida
+        # ==========================
 
         try:
 
             cliente = self.gestor_clientes.buscar_cliente(
-                "C001"
+                "CLI001"
             )
 
             servicio = self.gestor_servicios.buscar_servicio(
-                "S001"
+                "SAL001"
             )
 
-
             self.gestor_reservas.crear_reserva(
-                "R001",
+                "RES001",
                 cliente,
                 servicio,
-                3
+                5
             )
 
         except (
@@ -296,70 +289,68 @@ class MenuPrincipal:
             ServicioNoDisponibleError,
             DuracionInvalidaError
         ):
-
             errores += 1
 
 
-
+        # ==========================
         # 9. Confirmar reserva
+        # ==========================
 
         try:
 
             self.gestor_reservas.confirmar_reserva(
-                "R001"
+                "RES001"
             )
 
         except ReservaInvalidaError:
-
             errores += 1
 
 
-
+        # ==========================
         # 10. Procesar reserva
+        # ==========================
 
         try:
 
             self.gestor_reservas.procesar_reserva(
-                "R001"
+                "RES001"
             )
 
         except ReservaInvalidaError:
-
             errores += 1
 
 
-
+        # ==========================
         # 11. Cancelar reserva
+        # ==========================
 
         try:
 
             self.gestor_reservas.cancelar_reserva(
-                "R001"
+                "RES001"
             )
 
         except ReservaInvalidaError:
-
             errores += 1
 
 
-
-        # 12. Procesar reserva cancelada
+        # ==========================
+        # 12. Intentar procesar cancelada
+        # ==========================
 
         try:
 
             self.gestor_reservas.procesar_reserva(
-                "R001"
+                "RES001"
             )
 
         except ReservaInvalidaError:
-
             errores += 1
-
 
 
         messagebox.showinfo(
             "Simulación finalizada",
-            f"Proceso terminado correctamente.\n\n"
+            f"La simulación terminó correctamente.\n\n"
             f"Errores controlados: {errores}\n\n"
-            f"Revise el archivo logs.txt"
+            f"Consulte el archivo logs.txt"
         )
