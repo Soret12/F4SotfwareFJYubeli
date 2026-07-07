@@ -30,3 +30,16 @@
 [2026-07-06 20:51:43] Reserva R001 procesada. Total: $150000.0
 [2026-07-06 20:51:43] Reserva R001 cancelada.
 [2026-07-06 20:51:43] Error al procesar reserva: No se puede procesar una reserva cancelada.
+[2026-07-06 21:13:14] Cliente registrado correctamente: Ana Torres
+[2026-07-06 21:13:14] Cliente registrado correctamente: Carlos Perez
+[2026-07-06 21:13:14] Error de cliente: Ya existe un cliente con ese identificador.
+[2026-07-06 21:13:14] Servicio registrado correctamente: Sala reuniones
+[2026-07-06 21:13:14] Servicio registrado correctamente: Computador portátil
+[2026-07-06 21:13:14] Servicio registrado correctamente: Asesoría programación
+[2026-07-06 21:13:14] Error de servicio: El precio debe ser mayor que cero.
+[2026-07-06 21:13:14] Reserva R001 creada correctamente.
+[2026-07-06 21:13:14] Proceso de creación de reserva finalizado.
+[2026-07-06 21:13:14] Reserva R001 confirmada.
+[2026-07-06 21:13:14] Reserva R001 procesada. Total: $150000.0
+[2026-07-06 21:13:14] Reserva R001 cancelada.
+[2026-07-06 21:13:14] Error al procesar reserva: No se puede procesar una reserva cancelada.

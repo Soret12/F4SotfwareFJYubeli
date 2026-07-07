@@ -4,6 +4,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+from interfaz.utilidades import centrar_ventana
 
 
 class VentanaCliente:
@@ -14,7 +15,7 @@ class VentanaCliente:
 
         self.ventana = tk.Toplevel(padre)
         self.ventana.title("Gestión de Clientes")
-        self.ventana.geometry("600x650")
+        centrar_ventana(self.ventana,600,650)
         self.ventana.resizable(False, False)
         self.ventana.grab_set()
 
